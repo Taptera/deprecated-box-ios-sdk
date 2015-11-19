@@ -532,6 +532,7 @@
 		AF6E06A717AE66AF0039F17D /* BoxModelComparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxModelComparators.m; sourceTree = "<group>"; };
 		AF6E06AA17AE6C240039F17D /* BoxModelComparatorsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxModelComparatorsTest.h; sourceTree = "<group>"; };
 		AF6E06AB17AE6C240039F17D /* BoxModelComparatorsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxModelComparatorsTest.m; sourceTree = "<group>"; };
+		B27A9628CE9ED814D7CF1799 /* BoxSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxSDK.h; sourceTree = "<group>"; };
 		C52704CD19118D2F00497C65 /* icon-file-aac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-file-aac.png"; sourceTree = "<group>"; };
 		C52704CE19118D2F00497C65 /* icon-file-aac@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-file-aac@2x.png"; sourceTree = "<group>"; };
 		C52704CF19118D2F00497C65 /* icon-file-ai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-file-ai.png"; sourceTree = "<group>"; };
@@ -897,7 +898,6 @@
 		F0E5E35E17A78DB400153646 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		F0E5E36017A78DE000153646 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F0E5E36217A78DEF00153646 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		F4940937B74D6C7EB07D2855 /* BoxSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxSDK.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1253,7 +1253,7 @@
 				E4CF273516DC4A5100F5979E /* BoxSDKConstants.h */,
 				E44A95B016E21C5100356ADA /* BoxSDKConstants.m */,
 				E4C3289716D6F447002DC905 /* BoxLog.h */,
-				F4940937B74D6C7EB07D2855 /* BoxSDK.h */,
+				B27A9628CE9ED814D7CF1799 /* BoxSDK.h */,
 			);
 			path = BoxSDK;
 			sourceTree = "<group>";

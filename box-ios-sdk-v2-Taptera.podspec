@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # Root specification
 
-  s.name                  = 'box-ios-sdk-v2-taptera'
+  s.name                  = 'box-ios-sdk-v2-Taptera'
   s.version               = '1.2.2'
   s.summary               = 'iOS + OS X SDK for the Box V2 API.'
   s.homepage              = 'https://github.com/box/box-ios-sdk-v2'
@@ -12,6 +12,8 @@ Pod::Spec.new do |s|
   # Platform
 
   s.ios.deployment_target = '8.0'
+
+  s.ios.header_dir        = "BoxSDK"
 
   # File patterns
 
