@@ -9,13 +9,13 @@
 //
 
 #import "UIImage+BoxAdditions.h"
-#import "BoxSDK.h"
+#import "BoxSDKController.h"
 
 @implementation UIImage (BoxAdditions)
 
 + (UIImage *) imageFromBoxSDKResourcesBundleWithName:(NSString *)string
 {
-    NSBundle *bundle = [BoxSDK resourcesBundle];
+    NSBundle *bundle = [BoxSDKController resourcesBundle];
     NSString *str = [[bundle resourcePath] stringByAppendingPathComponent:[bundle pathForResource:string ofType:nil]];
     return [UIImage imageWithContentsOfFile:[str stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", string]]];
 }

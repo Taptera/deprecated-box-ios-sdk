@@ -8,13 +8,15 @@
 
 #define kCellHeight 58.0
 
-#import <BoxSDK/BoxItemPickerTableViewController.h>
-#import <BoxSDK/BoxSDK.h>
-#import <BoxSDK/BoxOAuth2Session.h>
-#import <BoxSDK/BoxItemPickerTableViewCell.h>
-#import <BoxSDK/UIImage+BoxAdditions.h>
-#import <BoxSDK/NSString+BoxAdditions.h>
-#import <BoxSDK/BOXItem+BoxAdditions.h>
+#import "BoxItemPickerTableViewController.h"
+#import "BoxOAuth2Session.h"
+#import "BoxItemPickerTableViewCell.h"
+#import "UIImage+BoxAdditions.h"
+#import "NSString+BoxAdditions.h"
+#import "BOXItem+BoxAdditions.h"
+#import "BoxFolder.h"
+#import "BoxItemPickerViewController.h"
+#import "BoxFile.h"
 
 @implementation BoxItemPickerTableViewController
 

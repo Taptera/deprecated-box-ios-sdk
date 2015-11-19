@@ -6,10 +6,14 @@
 //  Copyright (c) 2013 Box Inc. All rights reserved.
 //
 
-#import <BoxSDK/BoxItemPickerHelper.h>
-#import <BoxSDK/BoxSDK.h>
-#import <BoxSDK/BoxLog.h>
-#import <BoxSDK/BoxItem+BoxAdditions.h>
+#import "BoxItemPickerHelper.h"
+#import "BoxLog.h"
+#import "BoxItem+BoxAdditions.h"
+#import "BoxFolder.h"
+#import "BoxFile.h"
+#import "BoxSDKController.h"
+#import "BoxAPIDataOperation.h"
+#import "BoxFilesResourceManager.h"
 
 #define B0X_FAILED_OPERATION_MODEL (@"failedOperationModel")
 #define B0X_FAILED_OPERATION_REFRESHED_BLOCK (@"failedOperationRefreshedBlock")
@@ -38,7 +42,7 @@
 @synthesize inMemoryCache = _inMemoryCache;
 @synthesize failedOperationsArguments = _failedOperationsArguments;
 
-- (id)initWithSDK:(BoxSDK *)SDK
+- (id)initWithSDK:(BoxSDKController *)SDK
 {
     self = [super init];
     if (self != nil)

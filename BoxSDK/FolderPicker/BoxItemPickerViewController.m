@@ -6,12 +6,15 @@
 //  Copyright (c) 2013 Box Inc. All rights reserved.
 //
 
-#import <BoxSDK/UIImage+BoxAdditions.h>
-#import <BoxSDK/NSString+BoxAdditions.h>
+#import "UIImage+BoxAdditions.h"
+#import "NSString+BoxAdditions.h"
 
-#import <BoxSDK/BoxItemPickerViewController.h>
-#import <BoxSDK/BoxSDK.h>
-#import <BoxSDK/BoxLog.h>
+#import "BoxItemPickerViewController.h"
+#import "BoxLog.h"
+#import "BoxSDKErrors.h"
+#import "BoxSDKController.h"
+#import "BoxItemPickerHelper.h"
+#import "BoxFoldersRequestBuilder.h"
 
 #define kStrechWidthOffset 9.0
 #define kStrechHeightOffset 16.0
@@ -31,7 +34,7 @@ typedef enum {
 @property (nonatomic, readwrite, strong) UINavigationController *authorizationViewController;
 @property (nonatomic, readwrite, assign) BoxItemPickerState folderPickerState;
 
-@property (nonatomic, readwrite, weak) BoxSDK *sdk;
+@property (nonatomic, readwrite, weak) BoxSDKController *sdk;
 
 @property (nonatomic, readwrite, strong) NSString *folderID;
 @property (nonatomic, readwrite, strong) BoxFolder *folder;
@@ -77,7 +80,7 @@ typedef enum {
 @synthesize helper = _helper;
 
 
-- (id)initWithSDK:(BoxSDK *)sdk rootFolderID:(NSString *)rootFolderID thumbnailsEnabled:(BOOL)thumbnailsEnabled cachedThumbnailsPath:(NSString *)cachedThumbnailsPath selectableObjectType:(BoxItemPickerObjectType)selectableObjectType
+- (id)initWithSDK:(BoxSDKController *)sdk rootFolderID:(NSString *)rootFolderID thumbnailsEnabled:(BOOL)thumbnailsEnabled cachedThumbnailsPath:(NSString *)cachedThumbnailsPath selectableObjectType:(BoxItemPickerObjectType)selectableObjectType
 {
     self = [super init];
     if (self != nil)
@@ -435,7 +438,7 @@ typedef enum {
     return (self.selectableObjectType != BoxItemPickerObjectTypeFolder);
 }
 
-- (BoxSDK *)currentSDK
+- (BoxSDKController *)currentSDK
 {
     return self.sdk;
 }

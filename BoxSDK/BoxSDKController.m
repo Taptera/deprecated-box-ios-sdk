@@ -1,6 +1,6 @@
 //
-//  BoxSDK.m
-//  BoxSDK
+//  BoxSDKController.m
+//  BoxSDKController
 //
 //  Created on 2/19/13.
 //  Copyright (c) 2013 Box. All rights reserved.
@@ -8,13 +8,15 @@
 //  NOTE: this file is a mirror of BoxCocoaSDK/BoxCocoaSDK.m. Changes made here should be reflected there.
 //
 
-#import "BoxSDK.h"
+#import "BoxSDKController.h"
 #import "BoxSDKConstants.h"
 #import "BoxOAuth2Session.h"
 #import "BoxSerialOAuth2Session.h"
 #import "BoxSerialAPIQueueManager.h"
+#import "BoxParallelAPIQueueManager.h"
+#import "BoxParallelOAuth2Session.h"
 
-@implementation BoxSDK
+@implementation BoxSDKController
 
 @synthesize APIBaseURL = _APIBaseURL;
 @synthesize OAuth2Session = _OAuth2Session;
@@ -26,13 +28,13 @@
 @synthesize commentsManager = _commentsManager;
 
 #pragma mark - Globally accessible API singleton instance
-+ (BoxSDK *)sharedSDK
++ (BoxSDKController *)sharedSDK
 {
     static dispatch_once_t pred;
-    static BoxSDK *sharedBoxSDK;
+    static BoxSDKController *sharedBoxSDK;
 
     dispatch_once(&pred, ^{
-        sharedBoxSDK = [[BoxSDK alloc] init];
+        sharedBoxSDK = [[BoxSDKController alloc] init];
 
         [sharedBoxSDK setAPIBaseURL:BoxAPIBaseURL];
 

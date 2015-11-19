@@ -10,11 +10,11 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@class BoxSDK;
+@class BoxSDKController;
 
 @interface BoxSDKTests : SenTestCase
 {
-    BoxSDK *SDK;
+    BoxSDKController *SDK;
 }
 
 @end
