@@ -36,7 +36,7 @@
  * OAuth2Session should be used by subclasses to ensure that multiple
  * refresh operations are not excecuted in parallel.
  *
- * This object is owned by the BoxSDKController instance.
+ * This object is owned by the BoxSDK instance.
  */
 @property (nonatomic, readwrite, weak) BoxOAuth2Session *OAuth2Session;
 
@@ -44,7 +44,7 @@
  * The set of all currently enqueued or in flight BoxAPIOAuth2ToJSONOperation instances.
  * Subclasses should add these operations as dependencies of other, non-OAuth2 operations.
  *
- * This object is owned by the BoxSDKController instance.
+ * This object is owned by the BoxSDK instance.
  */
 @property (nonatomic, readwrite, strong) NSMutableSet *enqueuedOAuth2Operations;
 

@@ -88,7 +88,7 @@ typedef NS_ENUM(NSUInteger, BoxItemPickerObjectType) {
 
 /**
  * Initializes an itemPicker according to the caching options provided as parameters. This
- * folder picker is bound to one instance of the BoxSDKController and thus, one BoxOAuth2Session.
+ * folder picker is bound to one instance of the BoxSDK and thus, one BoxOAuth2Session.
  *
  * @param sdk The SDK which the folder picker uses to perform API calls.
  * @param rootFolderID The root folder where to start browsing.
@@ -98,7 +98,7 @@ typedef NS_ENUM(NSUInteger, BoxItemPickerObjectType) {
  * @param selectableObjectType The type of item the itemPicker should allow the selection for.
  * @return A BoxItemPickerViewController.
  */
-- (id)initWithSDK:(BoxSDKController *)sdk rootFolderID:(NSString *)rootFolderID thumbnailsEnabled:(BOOL)thumbnailsEnabled cachedThumbnailsPath:(NSString *)cachedThumbnailsPath selectableObjectType:(BoxItemPickerObjectType)selectableObjectType;
+- (id)initWithSDK:(BoxSDK *)sdk rootFolderID:(NSString *)rootFolderID thumbnailsEnabled:(BOOL)thumbnailsEnabled cachedThumbnailsPath:(NSString *)cachedThumbnailsPath selectableObjectType:(BoxItemPickerObjectType)selectableObjectType;
 
 /**
  * Purges the cache folder specified in the cachedThumbnailsPath parameter of the

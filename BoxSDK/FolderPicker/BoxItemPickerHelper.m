@@ -11,7 +11,7 @@
 #import "BoxItem+BoxAdditions.h"
 #import "BoxFolder.h"
 #import "BoxFile.h"
-#import "BoxSDKController.h"
+#import "BoxSDK.h"
 #import "BoxAPIDataOperation.h"
 #import "BoxFilesResourceManager.h"
 
@@ -42,7 +42,7 @@
 @synthesize inMemoryCache = _inMemoryCache;
 @synthesize failedOperationsArguments = _failedOperationsArguments;
 
-- (id)initWithSDK:(BoxSDKController *)SDK
+- (id)initWithSDK:(BoxSDK *)SDK
 {
     self = [super init];
     if (self != nil)

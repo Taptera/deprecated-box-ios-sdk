@@ -11,7 +11,7 @@
 
 @class BoxItemPickerViewController;
 @class BoxItem;
-@class BoxSDKController;
+@class BoxSDK;
 @class BoxItemPickerHelper;
 
 /**
@@ -58,7 +58,7 @@
 /**
  * Returns the SDK currently used by the folder picker
  */
-- (BoxSDKController *)currentSDK;
+- (BoxSDK *)currentSDK;
 
 
 @end

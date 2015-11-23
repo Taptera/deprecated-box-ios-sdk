@@ -10,13 +10,13 @@
 
 #import "BoxSDKTests.h"
 
-#import "BoxSDKController.h"
+#import "BoxSDK.h"
 
 @implementation BoxSDKTests
 
 - (void)setUp
 {
-    SDK = [[BoxSDKController alloc] init];
+    SDK = [[BoxSDK alloc] init];
     SDK.OAuth2Session = [[BoxSerialOAuth2Session alloc] init];
     SDK.APIBaseURL = BoxAPIBaseURL;
 }
@@ -36,15 +36,15 @@
 
 - (void)testThatSDKAndOAuth2SessionAreConstructedWithSameAPIUrl
 {
-    STAssertEquals([BoxSDKController sharedSDK].APIBaseURL, [BoxSDKController sharedSDK].OAuth2Session.APIBaseURLString, @"BoxSDKController and OAuth2Session were not constructed with the same API base URL");
+    STAssertEquals([BoxSDK sharedSDK].APIBaseURL, [BoxSDK sharedSDK].OAuth2Session.APIBaseURLString, @"BoxSDK and OAuth2Session were not constructed with the same API base URL");
 }
 
 - (void)testThatSingletonSDKIsOnlyInstantiatedOnce
 {
-    BoxSDKController *firstSingletonSDK = [BoxSDKController sharedSDK];
-    BoxSDKController *secondSingletonSDK = [BoxSDKController sharedSDK];
+    BoxSDK *firstSingletonSDK = [BoxSDK sharedSDK];
+    BoxSDK *secondSingletonSDK = [BoxSDK sharedSDK];
 
-    STAssertTrue(firstSingletonSDK == secondSingletonSDK, @"multiple invocations of [BoxSDKController sharedSDK] should refer to the same object");
+    STAssertTrue(firstSingletonSDK == secondSingletonSDK, @"multiple invocations of [BoxSDK sharedSDK] should refer to the same object");
 }
 
 @end

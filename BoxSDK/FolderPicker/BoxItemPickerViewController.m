@@ -12,7 +12,7 @@
 #import "BoxItemPickerViewController.h"
 #import "BoxLog.h"
 #import "BoxSDKErrors.h"
-#import "BoxSDKController.h"
+#import "BoxSDK.h"
 #import "BoxItemPickerHelper.h"
 #import "BoxFoldersRequestBuilder.h"
 
@@ -34,7 +34,7 @@ typedef enum {
 @property (nonatomic, readwrite, strong) UINavigationController *authorizationViewController;
 @property (nonatomic, readwrite, assign) BoxItemPickerState folderPickerState;
 
-@property (nonatomic, readwrite, weak) BoxSDKController *sdk;
+@property (nonatomic, readwrite, weak) BoxSDK *sdk;
 
 @property (nonatomic, readwrite, strong) NSString *folderID;
 @property (nonatomic, readwrite, strong) BoxFolder *folder;
@@ -80,7 +80,7 @@ typedef enum {
 @synthesize helper = _helper;
 
 
-- (id)initWithSDK:(BoxSDKController *)sdk rootFolderID:(NSString *)rootFolderID thumbnailsEnabled:(BOOL)thumbnailsEnabled cachedThumbnailsPath:(NSString *)cachedThumbnailsPath selectableObjectType:(BoxItemPickerObjectType)selectableObjectType
+- (id)initWithSDK:(BoxSDK *)sdk rootFolderID:(NSString *)rootFolderID thumbnailsEnabled:(BOOL)thumbnailsEnabled cachedThumbnailsPath:(NSString *)cachedThumbnailsPath selectableObjectType:(BoxItemPickerObjectType)selectableObjectType
 {
     self = [super init];
     if (self != nil)
@@ -438,7 +438,7 @@ typedef enum {
     return (self.selectableObjectType != BoxItemPickerObjectTypeFolder);
 }
 
-- (BoxSDKController *)currentSDK
+- (BoxSDK *)currentSDK
 {
     return self.sdk;
 }

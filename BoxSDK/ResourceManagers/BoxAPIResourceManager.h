@@ -42,7 +42,7 @@ typedef void (^BoxCollectionBlock)(BoxCollection *collection);
  *
  * In normal usage, this is `https://api.box.com`.
  *
- * @see [BoxSDKController sharedSDK]
+ * @see [BoxSDK sharedSDK]
  */
 @property (nonatomic, readwrite, strong) NSString *APIBaseURL;
 
@@ -51,7 +51,7 @@ typedef void (^BoxCollectionBlock)(BoxCollection *collection);
  *
  * This should always be a 2.x version. This SDK works with the V2 API.
  *
- * @see [BoxSDKController sharedSDK]
+ * @see [BoxSDK sharedSDK]
  */
 @property (nonatomic, readwrite, strong) NSString *APIVersion;
 

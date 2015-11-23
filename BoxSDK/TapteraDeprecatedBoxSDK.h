@@ -1,6 +1,6 @@
 #import "BoxLog.h"
 #import "BoxSDKErrors.h"
-#import "BoxSDKController.h"
+#import "BoxSDK.h"
 
 // OAuth2
 #import "BoxAuthorizationViewController.h"
